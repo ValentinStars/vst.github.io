@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личная страница Валентина</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #0d0d0d;
+            color: #d1d1d1;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #141414;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff9500;
+            font-family: 'Press Start 2P', cursive;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 4px solid #ff9500; /* Имитация курсора */
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #ff9500;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .card-header img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #ff9500;
+            animation: typing 2s steps(15, end), blink-caret .75s step-end infinite; /* Анимация печатания */
+        }
+
+        .card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #d1d1d1;
+            animation: typing 2s steps(40, end); /* Анимация печатания */
+        }
+
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #292929;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            min-width: 280px;
+            max-width: 32%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-card h3 {
+            margin: 0;
+            color: #ff9500;
+            font-size: 1.4em;
+            animation: typing 2s steps(15, end); /* Анимация печатания */
+        }
+
+        .project-card p {
+            color: #bfbfbf;
+            font-size: 1em;
+            animation: typing 2s steps(40, end); /* Анимация печатания */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #141414;
+            color: #d1d1d1;
+            position: relative;
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+
+        .navigation a {
+            color: #ff9500;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1em;
+            animation: typing 2s steps(10, end); /* Анимация печатания */
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+            50% {
+                text-shadow: -2px 0 red, 2px 0 blue;
+            }
+            100% {
+                text-shadow: 2px 0 red, -2px 0 blue;
+            }
+        }
+
+        /* Добавление стиля для виджета */
+        .widget-container {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Привет, я Valentin Stars!</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/80" alt="Avatar">
+                <h2>Обо мне</h2>
+            </div>
+            <p>Я Валентин, 14 лет. Я люблю программировать, создавать ботов для Discord и управлять серверами. Моя страсть — это технологии, киберпанк и разработка игр. Добро пожаловать на мою страницу!</p>
+        </div>
+
+        <div class="card">
+            <h2>Мои проекты</h2>
+            <div class="projects">
+                <div class="project-card" onclick="window.location.href='project1.html';">
+                    <h3>Discord бот Wild</h3>
+                    <p>Полнофункциональный бот для управления и автоматизации процессов на Discord серверах.</p>
+                </div>
+                <div class="project-card" onclick="window.location.href='project2.html';">
+                    <h3>Minecraft сервера</h3>
+                    <p>Нестандартные Minecraft сервера.</p>
+                </div>
+                <div class="project-card" onclick="window.location.href='project3.html';">
+                    <h3>API для бота</h3>
+                    <p>Мой личный API для интеграции с Discord ботами и различными сервисами.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Валентин. Все права защищены.
+        <div class="navigation">
+            <a href="http://N6.MCST.IO:45569/api">API</a>
+            <a href="https://github.com/ValentinStars">GitHub</a>
+            <a href="https://discord.gg/jJj7hDzRcq">Discord Server</a>
+        </div>
+    </footer>
+
+    <div class="widget-container">
+        <script src="//taplink.cc/id:12458762/widget/" async></script>
+    </div>
+</body>
+</html>
